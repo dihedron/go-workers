@@ -1,2 +1,2 @@
 # go-workers
-A simplistic goroutine pool.
+```go-workers``` is a simplistic goroutine pool.

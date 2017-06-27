@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"runtime"
 	"time"
 
 	"github.com/dihedron/go-workers/workers"
@@ -22,7 +23,7 @@ type Payment struct {
 func main() {
 
 	max := 1000000
-	pool := workers.New(1)
+	pool := workers.New(runtime.NumCPU())
 	pool.Start(myHandler)
 
 	t0 := time.Now()
